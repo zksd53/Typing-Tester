@@ -4,24 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Tester</title>
-
     <link rel="stylesheet" href="index.css">
 </head>
 <body class="body">
             
-    <div class = "center-box">
-
-        <div class = "writing-box"></div>
-
-
+    <div class="center-box">
+        <div class="writing-box">
+            <p>
+               Success is not the result of spontaneous combustion. You must set yourself on fire with passion, determination, 
+               and relentless effort. Every step forward, no matter how small, builds momentum. Challenges are inevitable, but 
+               your response defines your growth. Embrace failure as a stepping stone, not a dead end. Keep learning, stay curious, 
+               and push your limits. The journey matters as much as the destination, so make every moment count. Discipline and 
+               consistency will carry you through moments when motivation fades. Focus on progress rather than perfection, and 
+               celebrate even the smallest achievements. Doubt and fear may whisper in your ear, but courage is choosing to move 
+               forward anyway. Surround yourself with those who uplift and challenge you. Feed your mind with positivity, your 
+               body with energy, and your soul with purpose. The world doesn't need perfection; it needs your unique voice, your 
+               ideas, your effort. Take action today, no matter how imperfect, because the path to greatness begins with a single 
+               brave step. You are more capable than you know.
+            </p>
+        </div>
+        <input type="text" id="inputBox" placeholder="Type the sentence here..." class = "input" />
 
         <div class="reset">
-            <Button>reset</Button>
+            <button class = "scoreCheck">Score Check</button>
+            <button class = "reset">Reset</button>
         </div>
-
     </div>
 
-    <script src="index.js"></script>
+    
+   <div class="modal hidden">
+      
+      <h1> Below are your stats: 🙌</h1>
 
+      <div>
+        <p class = "wordsPerMinute"> WPM: 0  </p>
+        <p class = "accuracy">Accuracy:   0</p>
+        <p class = "errors"> Errors:      0</p>
+        <p class = "time"> Time-Taken:    0</p>
+      </div>
+    </div>
+    
+
+    <script src="index.js"></script>
 </body>
 </html>
