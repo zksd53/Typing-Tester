@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Typing Tester </title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="c.css" /> 
+
+  <style>
+    
+    #indexContent {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 1s ease, max-height 1s ease;
+      pointer-events: none;
+    }
+
+    .container.moved-up + #indexContent {
+      opacity: 1;
+      max-height: 5000px;
+      pointer-events: auto;
+      margin-top: 20vh;
+    }
+
+    body {
+      flex-direction: column;
+      justify-content: flex-start;
+      overflow-y: auto;
+      height: 100vh;
+    }
+
+    .container {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+      margin-top: 20vh;
+      transition: top 1s ease-out, margin-top 1s ease;
+    }
+
+    .container.moved-up {
+      margin-top: 5vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="textContainer">
+    <h1 class="glow-text">Typing Tester</h1>
+  </div>
+
+  <div id="indexContent">
+    <div class="center-box">
+      <div class="writing-box">
+            <p>
+               Success is not the result of spontaneous combustion. You must set yourself on fire with passion, determination, 
+               and relentless effort. Every step forward, no matter how small, builds momentum. Challenges are inevitable, but 
+               your response defines your growth. Embrace failure as a stepping stone, not a dead end. Keep learning, stay curious, 
+               and push your limits. The journey matters as much as the destination, so make every moment count. Discipline and 
+               consistency will carry you through moments when motivation fades. Focus on progress rather than perfection, and 
+               celebrate even the smallest achievements. 
+            </p>
+      </div>
+      <input
+        type="text"
+        id="inputBox"
+        placeholder="Timer will Start once you start typing in this box..."
+        class="input"
+      />
+      <div class="reset">
+        <button class="scoreCheck">Score Check</button>
+        <button class="reset">Reset</button>
+      </div>
+    </div>
+
+    <div class="modal hidden">
+      <span class="close-btn">&times;</span>
+      <h1>Below are your stats: 🙌</h1>
+      <div>
+        <p class="wordsPerMinute">WPM: 0</p>
+        <p class="accuracy">Accuracy: 0%</p>
+        <p class="errors">Errors: 0</p>
+        <p class="time">Time-Taken: 0.00s</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("textContainer").classList.add("moved-up");
+      }, 5000);
+    });
+  </script>
+  <script src="index.js"></script>
+</body>
+</html>

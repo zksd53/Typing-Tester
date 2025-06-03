@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Tester</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body class="body">
             
     <div class="center-box">
@@ -23,27 +25,27 @@
                brave step. You are more capable than you know.
             </p>
         </div>
-        <input type="text" id="inputBox" placeholder="Type the sentence here..." class = "input" />
+        <input type="text" id="inputBox" placeholder="Timer will Start once you start typing in this box..." class = "input" />
 
         <div class="reset">
             <button class = "scoreCheck">Score Check</button>
             <button class = "reset">Reset</button>
         </div>
-    </div>
+        </div>
 
     
    <div class="modal hidden">
-      
-      <h1> Below are your stats: 🙌</h1>
+  <span class="close-btn">&times;</span>
+  <h1>Below are your stats: 🙌</h1>
 
-      <div>
-        <p class = "wordsPerMinute"> WPM: 0  </p>
-        <p class = "accuracy">Accuracy:   0</p>
-        <p class = "errors"> Errors:      0</p>
-        <p class = "time"> Time-Taken:    0</p>
-      </div>
-    </div>
-    
+  <div>
+    <p class="wordsPerMinute">WPM: 0</p>
+    <p class="accuracy">Accuracy: 0%</p>
+    <p class="errors">Errors: 0</p>
+    <p class="time">Time-Taken: 0.00s</p>
+  </div>
+</div>
+
 
     <script src="index.js"></script>
 </body>
