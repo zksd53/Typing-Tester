@@ -61,7 +61,6 @@ body {
   pointer-events: none; 
   margin: 0 auto;
   width: 800px; 
-  
 }
 
 .container.moved-up + #indexContent {
@@ -81,7 +80,6 @@ body {
   padding: 1rem;
   box-sizing: border-box;
   z-index: 1;
- 
 }
 
 .writing-box {
@@ -101,6 +99,25 @@ body {
   border: none;
   border-radius: 5px;
   font-size: 1rem;
+}
+
+#timeSelector {
+  width: 500px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  background-color: white;
+  color: #4B0082;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%234B0082'%20d='M2%200L0%202h4L2%200zM2%205l2-2H0l2%202z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 0.65em auto;
 }
 
 .reset {
