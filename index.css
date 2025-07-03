@@ -173,3 +173,29 @@ body {
   font-weight: bold;
   z-index: 1000;
 }
+
+#loginBtn,
+#logoutBtn {
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #4B0082;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+#loginBtn:hover,
+#logoutBtn:hover {
+  background-color: #eee;
+  transform: scale(1.03);
+}
+
+#userInfo {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+}
