@@ -153,3 +153,30 @@ logoutBtn.addEventListener("click", () => {
     logoutBtn.style.display = "none";
   });
 });
+
+// Toggle Day/Night Mode - Persistent with localStorage
+const toggle = document.getElementById('toggle');
+
+let isNight = localStorage.getItem('isNight') === 'true';
+
+function applyMode(night) {
+  if (night) {
+    toggle.classList.add('active');
+    document.body.style.background = "linear-gradient(to right, #1a0033 0%, #4b004d 100%)"; // Dark gradient
+    document.body.style.color = "#fff";
+  } else {
+    toggle.classList.remove('active');
+    document.body.style.background = "linear-gradient(to right, #4B0082 0%, #D8BFD8 100%)"; // Light gradient
+    document.body.style.color = "#000";
+  }
+}
+
+// Apply mode on page load
+applyMode(isNight);
+
+// Toggle click event
+toggle.addEventListener('click', () => {
+  isNight = !isNight;
+  localStorage.setItem('isNight', isNight);
+  applyMode(isNight);
+});
