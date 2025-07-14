@@ -54,13 +54,14 @@ body {
 
 #indexContent {
   margin-top: 200px;
+  margin-bottom: 250px;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
   height: 850px;
   pointer-events: none; 
   margin: 0 auto;
-  width: 800px; 
+  width: auto; 
 }
 
 .container.moved-up + #indexContent {
@@ -71,7 +72,7 @@ body {
 }
 
 .center-box {
-  height: 330px;
+  height: 530px;
   width: 800px;
   color: white;
   background-color: rgba(0, 0, 0, 0.3);
@@ -84,11 +85,13 @@ body {
 
 .writing-box {
   height: auto;
+  width: auto;
+  
   max-width: 100%;
   color: white;
   background-color: rgba(0, 0, 0, 0.3);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.8rem;
   font-size: 18px;
 }
 

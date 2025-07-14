@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const loginBtn = document.getElementById("loginBtn");
   const logoutBtn = document.getElementById("logoutBtn");
   const userInfo = document.getElementById("userInfo");
-
+  const textBox = document.getElementById("textBox");
   let timerStarted = false;
   let startTime;
   let intervalId;
@@ -24,8 +24,46 @@ document.addEventListener("DOMContentLoaded", () => {
   let correctCharacters = 0;
   let totalCharacters = 0;
 
+  
+
+   let ourValue = Math.floor(Math.random() * 4)+1;
+
+   if(ourValue === 1){
+    textBox.textContent = `Success is not the result of spontaneous combustion. You must set yourself on fire with passion, determination,
+          and relentless effort. Every step forward, no matter how small, builds momentum. Challenges are inevitable, but
+          your response defines your growth. Embrace failure as a stepping stone, not a dead end. Keep learning, stay curious,
+          and push your limits. The journey matters as much as the destination, so make every moment count. Discipline and
+          consistency will carry you through moments when motivation fades. Focus on progress rather than perfection, and
+          celebrate even the smallest achievements.`;
+   }
+   else if(ourValue ===2){
+    textBox.textContent = `Celebrate consistency more than intensity. Anyone can sprint, but real transformation comes from showing up every day. 
+          Learn from every stumble, refine your process, and keep your focus forward. You don’t need to be perfect — you need to be persistent. 
+          Because in the end, it's not the most talented who win, but the most committed.Discipline is the bridge between dreams and reality. 
+          It's what shows up when the excitement disappears. Build habits that align with your goals, not your moods.
+          Train your mind to follow through — especially when it’s hard. Motivation might start the engine, but only discipline keeps you 
+          moving when the road gets rough.`;
+   }
+   else if(ourValue === 3){
+    textBox.textContent = `Success doesn’t come from comfort zones. It comes from showing up daily, doing the hard things, and pushing past excuses. 
+          Growth isn’t always visible — sometimes it’s hidden in the effort, in the repetition, in the quiet discipline. When no one is watching, your 
+          character is building. Let every failure teach you, and every setback fuel your comeback. What you do consistently shapes who you become.
+          Stay committed, even when it's hard. It’s not about being perfect; it’s about being better than you were yesterday.
+          That’s how real transformation begins — with effort, heart, and grit.`;
+   }
+   else{
+    textBox.textContent = `Dreams remain dreams unless you chase them with purpose. Passion ignites the fire, but discipline keeps it burning. 
+          Don’t wait for the perfect moment — start where you are, with what you have. The small steps you take today are the foundation for your future success.
+          Progress isn’t always loud; sometimes it’s quiet, steady, and unseen. Learn to trust the process and believe in your ability to grow. Challenges may slow you,
+          but they can’t stop you unless you let them. Keep going, stay focused, and remember — consistency outlasts talent every single time. Keep pushing forward, stay 
+          laser-focused on your goals, and remember that consistency and resilience outlast raw talent every single time.`;
+   }
+  
+
+
   // Typing Timer
   inputBox.addEventListener('input', () => {
+    timeSelector.disabled = true;
     if (!timerStarted && inputBox.value.trim().length > 0) {
       timerStarted = true;
       timerDisplay.style.display = 'block';
@@ -47,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Result Button
   document.querySelector('.scoreCheck').addEventListener('click', function () {
+    timeSelector.disabled = false;
     incorrectCharacters = 0;
     totalCharacters = 0;
     correctCharacters = 0;
@@ -82,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Reset Button
   document.querySelector('button.reset').addEventListener('click', function () {
+      timeSelector.disabled = false;
     words.textContent = 'WPM: 0';
     accuracy.textContent = 'Accuracy: 0%';
     time.textContent = 'Time-Taken: 0.00s';
