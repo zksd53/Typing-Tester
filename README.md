@@ -29,8 +29,7 @@ A simple **web-based typing speed test** app that measures your **Words Per Minu
 
 ## 🎬 Demo
 
-> *(Add your live demo URL here if you have one)*  
-> [https://yourusername.github.io/Typing-Tester](https://yourusername.github.io/Typing-Tester)
+> (https://typingtester53.netlify.app/) 
 
 ---
 
