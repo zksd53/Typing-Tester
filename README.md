@@ -38,4 +38,4 @@ A simple **web-based typing speed test** app that measures your **Words Per Minu
 ```bash
 git clone https://github.com/zksd53/Typing-Tester.git
 cd Typing-Tester
-# Open index.html in your browser
+# Open index.html in your browser by live-server
