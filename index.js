@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const logoutBtn = document.getElementById("logoutBtn");
   const userInfo = document.getElementById("userInfo");
   const textBox = document.getElementById("textBox");
+  const userId = document.getElementById("userId");
+
   let timerStarted = false;
   let startTime;
   let intervalId;
@@ -122,6 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Reset Button
   document.querySelector('button.reset').addEventListener('click', function () {
       timeSelector.disabled = false;
+      userId.textContent = `user_Id: ${randomUserName()}`;
     words.textContent = 'WPM: 0';
     accuracy.textContent = 'Accuracy: 0%';
     time.textContent = 'Time-Taken: 0.00s';
@@ -219,5 +222,29 @@ document.addEventListener("DOMContentLoaded", () => {
       applyMode(isNight);
     });
 
+     function randomId(){
+      let id ="";
+       id = Math.floor(Math.random()*1000000)+1;
+       return id;
+    };
 
+    let ourArray = [];
+    function randomUserName(){
+      let userName = ``;
+    let num =  randomId();
+
+      
+      while(ourArray.includes(num)){
+        num =  randomId();
+      }
+
+      ourArray.push(num);
+      userName = `UserName_${num}`;
+
+      return userName;
+     
+
+    };
+    console.log(randomUserName());
+    
 });
